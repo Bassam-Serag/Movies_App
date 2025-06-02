@@ -43,7 +43,6 @@ header {
   align-items: center;
   padding: 20px 100px;
   z-index: 1000;
-  /* background-color: var(--bg-color); */
   transition: 0.5s;
 }
 header.shadow {
@@ -71,6 +70,7 @@ header .logo {
 header .navbar {
   display: flex;
   column-gap: 5rem;
+  width: 100%;
 }
 .navbar li {
   position: relative;
@@ -115,28 +115,30 @@ header .btn {
 .home {
   width: 100%;
   min-height: 100vh;
-  background-image: url(../img/home3.jpg);
+  background-image: url('../img/home3.jpg');
   background-position: center;
   background-size: cover;
   position: relative;
 }
 
-.home .home-text {
+.home-text {
   position: absolute;
   top: 40%;
-  padding-left: 80px;
+  left: 5%;
 }
+
 .home-text span {
   font-weight: 500;
   color: #000;
   text-transform: uppercase;
 }
+
 .home-text h2 {
-  color: var(--bg-color);
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
+
 .home-text .btn {
   background-color: var(--main-color);
   color: var(--bg-color);
@@ -144,6 +146,7 @@ header .btn {
   border-radius: 0.5rem;
   font-weight: 400;
 }
+
 .btn:hover {
   background: #fa1216;
 }
@@ -158,20 +161,15 @@ header .btn {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 0.5rem;
 }
-.movies-container {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px,auto));
-  gap: 1rem;
-  margin-top: 2rem;
-}
+
 .box .box-img {
   width: 100%;
   height: 270px;
+  overflow: hidden;
 }
+
 .box-img img {
   width: 100%;
   height: 100%;
@@ -179,18 +177,26 @@ header .btn {
   cursor: pointer;
   transition: 0.2s all linear;
 }
+
 .box-img img:hover {
-  transform:translateY(-10px);
+  transform: translateY(-10px);
 }
+
 .box h3 {
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--main-color);
+  margin-top: 0.5rem;
 }
+
 .box span {
   font-size: 13px;
+  color: #555;
 }
+
 /* Movies */
+
+
 /* Coming Soon */
 
 .coming-container {
@@ -205,7 +211,7 @@ header .btn {
 /* Coming Soon */
 
 /* news */
-.news {
+/* .news {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
@@ -214,20 +220,20 @@ header .btn {
   align-items: center;
   justify-content: center;
   row-gap: 2rem;
-}
+} */
 .news h2 {
   font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
 }
-.news form {
+/* .news form {
   display: flex;
   align-items: center;
   padding: 10px;
   background-color: var(--bg-color);
   border-radius: 0.5rem;
-}
-.news form input[type="email"] {
+} */
+/* .news form input[type="email"] {
   border: 0;
   outline: 0;
   width: 300px;
@@ -236,24 +242,17 @@ header .btn {
   color: var(--text-color);
   font-size: 0.8rem;
   font-weight: 400;
-}
+} */
 .news .btn {
-  border: 0;
-  outline: 0;
-  cursor: pointer;
   background-color: var(--main-color);
-  color: var(--bg-color);
-  padding: 0.7rem 1.4rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
+  color: var(--bg-color); 
 }
 .btn:hover {
   background: #fa1216;
 }
 /* news */
 /* footer */
-.footer {
+/* .footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -293,7 +292,21 @@ header .btn {
 .social-icons a:hover {
   background-color: var(--main-color);
   color: var(--bg-color);
+} */
+.social-icons a{
+  width: 55px;
+  height: 55px;
+  background-color: var(--bg-color);
+  color: var(--main-color);
+  border-color: rgba(2, 3, 7, 0.4); 
+  font-size: 2rem; transition: 0.2s all linear;
+  text-decoration: none;
 }
+.footer .social-icons a:hover {
+  background-color: var(--main-color) !important;
+  color: var(--bg-color) !important;
+}
+
 /* footer */
 /* copy */
 .copy {
@@ -308,7 +321,7 @@ header .btn {
 /* copy */
 
 /* Resbonsive */
-@media (max-width:1080px) {
+/* @media (max-width:1080px) {
   .home-text {
     padding: 0 100px;
   }
@@ -375,8 +388,8 @@ header .btn {
   .coming-container {
     grid-template-columns: repeat(auto-fit, minmax(160px ,auto));
   }
-}
-@media (max-width: 472px) {
+} */
+/* @media (max-width: 472px) {
   .footer {
     flex-direction: column;
     align-items: center;
@@ -405,6 +418,6 @@ header .btn {
   .home-text h2 {
     font-size: 1.2rem;
   }
-}
+} */
 
 /* Resbonsive */
